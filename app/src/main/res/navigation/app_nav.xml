@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.newsapp.presentation.ui.screens.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_newsScreen"
+            app:destination="@id/newsScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsScreen"
+        android:name="uz.gita.newsapp.presentation.ui.screens.NewsScreen"
+        android:label="NewsScreen"
+        tools:layout="@layout/screen_news">
+        <action
+            android:id="@+id/action_newsScreen_to_interestingNewsScreen"
+            app:destination="@id/interestingNewsScreen" />
+        <action
+            android:id="@+id/action_newsScreen_to_chooseLanguageDialog"
+            app:destination="@id/chooseLanguageDialog" />
+        <action
+            android:id="@+id/action_newsScreen_to_topNewsScreen"
+            app:destination="@id/topNewsScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/topNewsScreen"
+        android:name="uz.gita.newsapp.presentation.ui.screens.TopNewsScreen"
+        android:label="TopNewsScreen"
+        tools:layout="@layout/screen_top_news" >
+        <action
+            android:id="@+id/action_topNewsScreen_to_universalScreenForNews"
+            app:destination="@id/universalScreenForNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/interestingNewsScreen"
+        android:name="uz.gita.newsapp.presentation.ui.screens.InterestingNewsScreen"
+        android:label="InterestingNewsScreen"
+        tools:layout="@layout/screen_interesting_news" >
+        <action
+            android:id="@+id/action_interestingNewsScreen_to_myScreen"
+            app:destination="@id/myScreen" />
+    </fragment>
+    <dialog
+        tools:layout="@layout/dialog_choose_language"
+        android:id="@+id/chooseLanguageDialog"
+        android:name="uz.gita.newsapp.presentation.ui.dialog.ChooseLanguageDialog"
+        android:label="ChooseLanguageDialog" >
+        <action
+            android:id="@+id/action_chooseLanguageDialog_to_topNewsScreen"
+            app:destination="@id/topNewsScreen"
+            app:popUpTo="@id/chooseLanguageDialog"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        tools:layout="@layout/screen_news_items"
+        android:id="@+id/universalScreenForNews"
+        android:name="uz.gita.newsapp.presentation.ui.screens.UniversalScreenForNews"
+        android:label="UniversalScreenForNews" />
+    <fragment
+        tools:layout="@layout/my_news_items"
+        android:id="@+id/myScreen"
+        android:name="uz.gita.newsapp.presentation.ui.screens.MyScreen"
+        android:label="MyScreen" />
+</navigation>

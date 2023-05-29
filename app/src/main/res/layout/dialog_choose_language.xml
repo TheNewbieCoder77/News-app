@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#474D6E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Choose your country:"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/usa"
+        android:layout_marginTop="50dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="U.S.A"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/russia"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="Russia"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/india"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="India"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/france"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="France"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/australia"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="Australia"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gBritain"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textColor="@color/black"
+        android:text="Great Britain"
+        android:background="@drawable/bg_button"
+        android:textSize="20sp"
+        android:layout_marginBottom="30dp"/>
+
+</LinearLayout>
